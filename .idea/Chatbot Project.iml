@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="covid data preprocessing" />
+    <orderEntry type="module" module-name="Data Preprocessing" />
+    <orderEntry type="module" module-name="WeatherData" />
+    <orderEntry type="module" module-name="Flask-d3" />
+    <orderEntry type="module" module-name="Data Creation For D3 Visualization" />
+    <orderEntry type="module" module-name="JsonToCsvConverter" />
+  </component>
+</module>

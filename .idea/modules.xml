@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Chatbot Project.iml" filepath="$PROJECT_DIR$/.idea/Chatbot Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Data Creation For D3 Visualization/.idea/Data Creation For D3 Visualization.iml" filepath="$PROJECT_DIR$/../Data Creation For D3 Visualization/.idea/Data Creation For D3 Visualization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Data Preprocessing/.idea/Data Preprocessing.iml" filepath="$PROJECT_DIR$/../Data Preprocessing/.idea/Data Preprocessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Flask-d3/.idea/Flask-d3.iml" filepath="$PROJECT_DIR$/../Flask-d3/.idea/Flask-d3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JsonToCsvConverter/.idea/JsonToCsvConverter.iml" filepath="$PROJECT_DIR$/../JsonToCsvConverter/.idea/JsonToCsvConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../WeatherData/.idea/WeatherData.iml" filepath="$PROJECT_DIR$/../WeatherData/.idea/WeatherData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Demo/.idea/covid data preprocessing.iml" filepath="$PROJECT_DIR$/../Demo/.idea/covid data preprocessing.iml" />
+    </modules>
+  </component>
+</project>
