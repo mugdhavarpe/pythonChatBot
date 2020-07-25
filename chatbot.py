@@ -8,7 +8,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 #  this library is used to deal with human language data in python
 import nltk
-import tkinter as tk
 
 
 def main():
@@ -42,7 +41,7 @@ def main():
             if greeting_response(user_input) is not None:
                 print("D3 Helper: " + greeting_response(user_input))
             else:
-                print(" D3 Helper: " + bot_response(user_input, sent_tokens))
+                print(" D3 Helper: " + generate_response(user_input, sent_tokens))
 
 
 def greeting_response(text):
@@ -60,26 +59,8 @@ def greeting_response(text):
             return random.choice(bot_greetings)
 
 
-def index_sort(list_var):
-    """
-    This method is used to sort the indices of the values to order them by values
-    and returns the same.
-    :param list_var: list of indices unsorted
-    :return: sorted list of indices
-    """
-    length = len(list_var)
-    list_index = list(range(0, length))
-    x = list_var
-    for i in range(length):
-        for j in range(length):
-            if x[list_index[i]] > x[list_index[j]]:
-                temp = list_index[i]
-                list_index[i] = list_index[j]
-                list_index[j] = temp
-    return list_index
 
-
-def bot_response(user_input, sentence_list):
+def generate_response(user_input, sentence_list):
     """
     This method is to calculate the word counts from the article specified and
     calculate the similarity between the user's input and the document provided
@@ -94,7 +75,7 @@ def bot_response(user_input, sentence_list):
     cm = TfidfVectorizer().fit_transform(sentence_list)
     similarity_scores = cosine_similarity(cm[-1], cm)
     flatten = similarity_scores.flatten()
-    index = index_sort(flatten)
+    index = sorting_index(flatten)
     index = index[1:]
     response_flag = 0
     j = 0
@@ -113,6 +94,25 @@ def bot_response(user_input, sentence_list):
         sentence_list.remove(user_input)
 
     return bot_response
+
+
+def sorting_index(list_var):
+    """
+    This method is used to sort the indices of the values to order them by values
+    and returns the same.
+    :param list_var: list of indices unsorted
+    :return: sorted list of indices
+    """
+    length = len(list_var)
+    list_index = list(range(0, length))
+    x = list_var
+    for i in range(length):
+        for j in range(length):
+            if x[list_index[i]] > x[list_index[j]]:
+                temp = list_index[i]
+                list_index[i] = list_index[j]
+                list_index[j] = temp
+    return list_index
 
 
 if __name__ == '__main__':
